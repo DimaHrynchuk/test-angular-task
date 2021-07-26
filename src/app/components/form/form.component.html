@@ -1,0 +1,15 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+  <mat-form-field>
+    <mat-label>UserName</mat-label>
+    <input matInput formControlName="userName" minlength="3" maxlength="32">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password">
+  </mat-form-field>
+
+  <button mat-raised-button [disabled]="myForm.invalid">
+    Submit
+  </button>
+</form>

@@ -1,0 +1,42 @@
+.accordion-wrapper {
+  .mat-expansion-panel {
+    max-width: 50%;
+    margin: 30px;
+
+    .mat-expansion-panel-header {
+      height: auto;
+
+      .mat-expansion-panel-header-title {
+        align-items: center;
+        width: 37%;
+      }
+
+      .mat-expansion-panel-header-description {
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+:host::ng-deep {
+  .mat-expansion-panel-header-description {
+    .mat-expansion-indicator::after {
+      position: relative;
+      top: -4px;
+    }
+
+    mat-form-field {
+      height: 63px;
+      pointer-events: none;
+
+      .mat-form-field-flex {
+        background: none;
+      }
+
+      .mat-form-field-underline {
+        display: none;
+      }
+    }
+  }
+}
